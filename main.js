@@ -25,36 +25,46 @@
 // };
 // console.log(getMinWeight(bikes));
 
-const football = [
-    {name:"team1", points:0, fouls:0},
-    {name:"team2", points:0, fouls:0},
-    {name:"team3", points:0, fouls:0},
-    {name:"team4", points:0, fouls:0},
-];
 
-const football2 = [];
+// const football = [
+//     {name:"team1", points:0, fouls:0},
+//     {name:"team2", points:0, fouls:0},
+//     {name:"team3", points:0, fouls:0},
+//     {name:"team4", points:0, fouls:0},
+// ];
 
-function genRandomNums(){
-    let rnum = Math.floor(Math.random()*100 + 1 );
-    return rnum;
+// const football2 = [];
+
+// function genRandomNums(){
+//     let rnum = Math.floor(Math.random()*100 + 1 );
+//     return rnum;
+// }
+// football.forEach( (item,index) =>{
+//     item.points = genRandomNums();
+//     item.fouls = genRandomNums();
+
+//     //football2.push({name:item.name, points:item.points});
+// });
+// const football3 = football;
+// football3.forEach( (item,index) =>{
+//     delete item.fouls;
+// });
+// const football4 = football.map(item => {
+//     return{name: item.name, points: item.points}; 
+// });
+// console.log(football);
+// console.log(football2);
+// console.log(football3);
+
+
+const arr = [2,3,4,5,6,7,8,9];
+const num1 = 4;
+const num2 = 8;
+
+function getNumsBetween(arr,num1,num2) {
+    const arrBetween = arr.filter((item,index) => item>num1 && item<num2);
+    return arrBetween;
 }
+console.log(getNumsBetween(arr,num1,num2));
 
-football.forEach( (item,index) =>{
-    item.points = genRandomNums();
-    item.fouls = genRandomNums();
 
-    //football2.push({name:item.name, points:item.points});
-});
-
-const football3 = football;
-football3.forEach( (item,index) =>{
-    delete item.fouls;
-});
-
-const football4 = football.map(item => {
-    return{name: item.name, points: item.points}; 
-});
-
-console.log(football);
-console.log(football2);
-console.log(football3);
