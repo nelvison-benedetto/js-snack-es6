@@ -43,8 +43,18 @@ football.forEach( (item,index) =>{
     item.points = genRandomNums();
     item.fouls = genRandomNums();
 
-    football2.push({nme:item.name, points:item.points});
+    //football2.push({name:item.name, points:item.points});
+});
+
+const football3 = football;
+football3.forEach( (item,index) =>{
+    delete item.fouls;
+});
+
+const football4 = football.map(item => {
+    return{name: item.name, points: item.points}; 
 });
 
 console.log(football);
 console.log(football2);
+console.log(football3);
