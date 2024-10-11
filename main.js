@@ -32,6 +32,8 @@ const football = [
     {name:"team4", points:0, fouls:0},
 ];
 
+const football2 = [];
+
 function genRandomNums(){
     let rnum = Math.floor(Math.random()*100 + 1 );
     return rnum;
@@ -40,6 +42,9 @@ function genRandomNums(){
 football.forEach( (item,index) =>{
     item.points = genRandomNums();
     item.fouls = genRandomNums();
+
+    football2.push({nme:item.name, points:item.points});
 });
 
 console.log(football);
+console.log(football2);
